@@ -10,8 +10,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
-<script src="src/router.js"></script>
-<script src="src/app.js"></script>
+<script src="src/router.js" defer></script>
+<script src="src/app.js" defer></script>
 </head>
 <body class="loaded">
 <header class="header">
@@ -54,10 +54,10 @@
         </section>
         <section class="hidden" id="employment">
             <h1><i class="fa fa-briefcase"></i> Employment</h1>
-            <p style="margin: 1em 0;"><small>Most of these positions have examples of work available in my&nbsp;<a
-                        class="nav" href="#/portfolio">portfolio</a></small><br /></p>
+            <p><small>Most of these positions have examples of work available in my&nbsp;<a
+                        class="nav" href="#/portfolio">portfolio</a></small></p>
             <ul class="spaced read-more-items">
-                <li><a class="read-more pull-right subtle" href="#">more info...</a><span class="meta-year">2024 - Present:</span> <span class="meta-company">Lens.org.</span> Front End Developer<small style="opacity: 0.7;"> (TypeScript, React)</small>
+                <li><a class="read-more pull-right subtle" href="#">more info...</a><span class="meta-year">2024 - Present:</span> <span class="meta-company">Lens.org.</span> Front End Developer<small class="meta-tech"> (TypeScript, React)</small>
                     <div class="hidden read-more-content">
                         <p>Returned to&nbsp;<a href="https://www.lens.org">Lens.org</a> to continue working on their mission
                             to map the world's scholarly and patent data.</p>
@@ -65,7 +65,7 @@
                     </div>
                 </li>
                 <li><a class="read-more pull-right subtle" href="#">more info...</a><span class="meta-year">2022 - 2024:</span> <span class="meta-company">iCare.</span> Full Stack Engineer
-                    <small style="opacity: 0.7;"> (TypeScript, Kotlin, Ruby)</small>
+                    <small class="meta-tech"> (TypeScript, Kotlin, Ruby)</small>
                     <div class="hidden read-more-content">
                         <p>
                             This year I joined iCare (formerly <a href="https://oculo.com.au">Oculo</a>)
@@ -81,7 +81,7 @@
                     </div>
                 </li>
                 <li><a class="read-more pull-right subtle" href="#">more info...</a><span class="meta-year">2016 - 2022:</span> <span class="meta-company">Lens.org.</span> Front End
-                    Developer<small style="opacity: 0.7;"> (JavaScript)</small>
+                    Developer<small class="meta-tech"> (JavaScript)</small>
                     <div class="hidden read-more-content">
                         <p>Since 2016 I have helped the non-profit&nbsp;<a href="https://www.lens.org">Lens.org</a> with
                             their
@@ -94,7 +94,7 @@
                     </div>
                 </li>
                 <li><a class="read-more pull-right subtle" href="#">more info...</a><span class="meta-year">2012 - 2016:</span> <span class="meta-company">Codeworx.</span> Web
-                    Programmer<small style="opacity: 0.7;"> (Node JS, Coffeescript)</small>
+                    Programmer<small class="meta-tech"> (Node JS, Coffeescript)</small>
                     <div class="hidden read-more-content">
                         <p>Starting in 2012, I worked full time for&nbsp;<a
                                 href="https://codeworx.com.au/">Codeworx</a>, producing
@@ -106,8 +106,7 @@
                         <p>Project uses: Coffeescript, NodeJS, Socket IO, Browserify, Mocha, Jade</p>
                     </div>
                 </li>
-                <li><a class="read-more pull-right subtle" href="#">more info...</a><span class="meta-year">2012:</span> <span class="meta-company">Digicon.</span> Web Programmer<small
-                        style="opacity: 0.7;"> (.NET, Javascript)</small>
+                <li><a class="read-more pull-right subtle" href="#">more info...</a><span class="meta-year">2012:</span> <span class="meta-company">Digicon.</span> Web Programmer<small class="meta-tech"> (.NET, Javascript)</small>
                     <div class="hidden read-more-content">
                         <p>After returning from Scotland I immediately started working for a .NET Agency in Spring Hill
                             called
@@ -120,7 +119,7 @@
                     </div>
                 </li>
                 <li><a class="read-more pull-right subtle" href="#">more info...</a><span class="meta-year">2011:</span> <span class="meta-company">Open Platform.</span> Front End
-                    Developer<small style="opacity: 0.7;"> (.NET, Javascript)</small>
+                    Developer<small class="meta-tech"> (.NET, Javascript)</small>
                     <p class="hidden read-more-content">While living in Scotland, I briefly worked for the Edinburgh
                         .NET software
                         house&nbsp;<a href="http://openplatform.co.uk/">Open Platform</a>. Corporate-level web tools for
@@ -132,14 +131,14 @@
                         front-end of their new website, using jQuery and CSS3.</p>
                 </li>
                 <li><a class="read-more pull-right subtle" href="#">more info...</a><span class="meta-year">2010 - 2011:</span> <span class="meta-company">Self Employed.</span> Web
-                    Programmer<small style="opacity: 0.7;"> (PHP, MySQL, Javascript)</small>
+                    Programmer<small class="meta-tech"> (PHP, MySQL, Javascript)</small>
                     <p class="hidden read-more-content">One year working primarily through oDesk. Mostly 2-3 major
                         projects and
                         about 8-10 smaller, shorter ones. Almost all web applications.</p>
                 </li>
                 <li><a class="read-more pull-right subtle" href="#">more info...</a><span class="meta-year">2006 - 2010:</span> <span class="meta-company">Kintek.com.au.</span>
                     Production
-                    Manager<small style="opacity: 0.7;"> (PHP, MySQL, Javascript)</small>
+                    Manager<small class="meta-tech"> (PHP, MySQL, Javascript)</small>
                     <p class="hidden read-more-content">When I joined Kintek there were only two other staff members.
                         They taught me
                         how to produce professional websites. The company grew to about 10 employees while I was there,
@@ -152,7 +151,7 @@
                 </li>
                 <li><a class="read-more pull-right subtle" href="#">more info...</a><span class="meta-year">2008 - 2009:</span> <span class="meta-company">University of
                     Queensland.</span>
-                    Tutor<small style="opacity: 0.7;"> (Web Information Systems)</small>
+                    Tutor<small class="meta-tech"> (Web Information Systems)</small>
                     <p class="hidden read-more-content">At University I worked as a tutor for a third year Web
                         Information Systems
                         course (INFS3202), and even received a tutoring excellence award which I was pretty proud of.
@@ -267,11 +266,9 @@
             </div>
         </section>
         <section class="hidden" id="portfolio">
-            <h1>
-                <div class="fa fa-desktop"></div> Portfolio
-            </h1>
-            <p style="margin: 1em 0;"><small>More information on the employers mentioned available under&nbsp;<a
-                        class="nav" href="#/employment">employment</a></small><br /></p>
+            <h1><i class="fa fa-desktop"></i> Portfolio</h1>
+            <p><small>More information on the employers mentioned available under&nbsp;<a
+                        class="nav" href="#/employment">employment</a></small></p>
             <ul class="spaced read-more-items">
                 <li><span class="meta-project">Lens.org</span> - Patent and Scholarly Search<a class="read-more pull-right subtle" href="">more
                         info...</a>
@@ -310,7 +307,7 @@
                         <p>In 2014 I consulted for a Brisbane business who producied web applications. I reviewed one of
                             their apps and codebase and produced a 10 page report covering the following aspects of
                             their implementation of one particular project:</p>
-                        <ul style="margin: 20px 0 10px 40px;">
+                        <ul>
                             <li>Summary</li>
                             <li>MAJOR Issues</li>
                             <li>Minor Issues</li>
@@ -419,14 +416,19 @@
         </section>
         <section class="hidden" id="about">
             <h1>When not working</h1>
-            <p>I'm the lucky father of identical twin girls. So as passionate as I am about web development, I'll always
-                choose my family over working late. If you're looking for someone willing to put in 60 hour work weeks,
-                I'm not the right choice.</p>
-            <p>If I ever get time to myself, you'll find me working on my garden.</p>
-            <div class="text-center"><img src="img/family.jpg" /></div><br />
+            <div class="about-body">
+                <div class="about-text">
+                    <p>I'm the lucky father of identical twin girls. So as passionate as I am about web development, I'll always
+                        choose my family over working late. If you're looking for someone willing to put in 60 hour work weeks,
+                        I'm not the right choice.</p>
+                    <p>If I ever get time to myself, you'll find me working on my garden.</p>
+                </div>
+                <div class="about-image"><img src="img/family.jpg" alt=""></div>
+            </div>
         </section>
     </div>
 
 </div>
+<div class="avatar-peek" aria-hidden="true"><img src="img/headshot.jpg" alt=""></div>
 </body>
 </html>

@@ -5,8 +5,9 @@
 }
 
 html {
-  background: #182948;
-  background: linear-gradient(135deg, #182948 0%, #1d314f 50%, #153045 100%);
+  /* Main bg — oklch(30/28/26% 0.065 258), gamut-mapped */
+  background: #132947;
+  background: linear-gradient(180deg, #182e4e 0%, #132947 55%, #0d2540 100%);
   background-attachment: fixed;
   min-height: 100vh;
 }
@@ -14,7 +15,7 @@ html {
 body {
   font-size: 20px;
   font-family: "Space Grotesk", sans-serif;
-  color: #DADADA;
+  color: #d1d8e2;
   line-height: 1.5;
 }
 
@@ -33,7 +34,7 @@ p {
 h1,
 h2,
 h3 {
-  color: #fff;
+  color: #f6f9fc;
   font-weight: 600;
 }
 
@@ -67,9 +68,10 @@ ul {
 }
 
 .header {
-  background-color: #09496C;
-  background: linear-gradient(200deg, #0b5278 0%, #09496C 45%, #073a56 100%);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  /* Sidebar — oklch(24/22/19% 0.055 258) — darker than main, same hue */
+  background-color: #091a34;
+  background: linear-gradient(200deg, #0e1f39 0%, #091a34 45%, #05132a 100%);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
   overflow: hidden;
 }
 
@@ -180,7 +182,7 @@ ul {
 @keyframes loadContact {
   0% {
     opacity: 0;
-    transform: scale(0.5):
+    transform: scale(0.5);
   }
   50% {
     opacity: 1;
@@ -273,8 +275,10 @@ ul {
     white-space: nowrap;
   }
 
-  /* Home animation loading */
+}
 
+/* Desktop variant of loadHeader — slides in from the left */
+@media(min-width: 768px) {
   @keyframes loadHeader {
     0% {
       opacity: 0;
@@ -285,62 +289,19 @@ ul {
       transform: translateY(0);
     }
   }
-
-  @keyframes loadSimon {
-    0% {
-      opacity: 0;
-      transform: translateY(-100%);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  @keyframes loadTabs {
-    0% {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  @keyframes loadView {
-    0% {
-      opacity: 0;
-      transform: scale(0.99) translateY(10px);
-    }
-    100% {
-      opacity: 1;
-      transform: scale(1) translateY(0);
-    }
-  }
-
-  @keyframes loadContact {
-    0% {
-      opacity: 0;
-      transform: scale(0.5);
-    }
-    50% {
-      opacity: 1;
-      transform: scale(1.2);
-    }
-    100% {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
-
 }
 
 .hidden {
     display: none;
 }
 a {
-    color: #eee;
+    color: #f8b65d;
+    text-decoration-color: rgba(248, 182, 93, 0.45);
+    text-underline-offset: 3px;
+    transition: color 140ms ease;
+}
+a:hover {
+    color: #ffc673;
 }
 .text-center {
     text-align: center;
@@ -349,16 +310,20 @@ a {
     opacity: 0.8;
 }
 .meta-year {
-    color: #7ea6c4;
+    color: #faab3f;
     font-variant-numeric: tabular-nums;
+    font-weight: 500;
 }
 .meta-company {
-    color: #fff;
-    font-weight: 500;
+    color: #f6f9fc;
+    font-weight: 600;
 }
 .meta-project {
-    color: #fff;
-    font-weight: 500;
+    color: #f6f9fc;
+    font-weight: 600;
+}
+.meta-tech {
+    opacity: 0.7;
 }
 .read-more-content {
     padding: 1em;
@@ -403,6 +368,7 @@ a {
 h1 .fa {
     float: right;
     opacity: 0.5;
+    color: #faab3f;
 }
 /* hacks */
 ul.unstyled {
@@ -428,8 +394,122 @@ section {
   margin: 0;
 }
 .read-more-items > li:hover {
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.045);
 }
 .read-more-items .read-more-content {
   cursor: default;
+}
+
+/* Active tab — amber rule with soft glow.
+   Mobile: horizontal tabs → bottom rule. Desktop: vertical stack → left rule. */
+.tabs__item--selected {
+    position: relative;
+}
+.tabs__item--selected::before {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    height: 3px;
+    background: #faab3f;
+    box-shadow: 0 0 12px rgba(250, 171, 63, 0.35);
+}
+@media (min-width: 768px) {
+    .tabs__item--selected::before {
+        left: 0; top: 0; bottom: 0; right: auto;
+        width: 3px;
+        height: auto;
+    }
+}
+
+/* Amber bullet dots on the read-more list */
+.read-more-items {
+    color: #d1d8e2;
+    list-style: none;
+    margin-left: 0;
+}
+.read-more-items > li {
+    position: relative;
+    padding-left: 1.4em;
+}
+.read-more-items > li::before {
+    content: "•";
+    position: absolute;
+    left: 0.45em;
+    top: 0.5em;
+    color: #faab3f;
+    opacity: 0.95;
+    font-size: 1.1em;
+    line-height: 1;
+}
+
+/* Tighter "more info..." link */
+.read-more {
+    color: #f8b65d;
+    opacity: 0.9;
+    text-decoration: underline;
+    text-decoration-color: rgba(248, 182, 93, 0.45);
+    text-underline-offset: 3px;
+}
+.read-more-items > li:hover .read-more {
+    opacity: 1;
+    color: #ffc673;
+}
+
+/* About page — heading full-width, then text left / family photo right. */
+#about .about-body {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    align-items: flex-start;
+}
+#about .about-text {
+    flex: 1 1 280px;
+}
+#about .about-image {
+    flex: 0 1 300px;
+    max-width: 300px;
+}
+#about .about-image img {
+    display: block;
+    width: 100%;
+    border-radius: 4px;
+}
+
+/* Cheeky avatar peek — always present, scales up and slides in on bigger
+   screens, slides in further on hover. Wrapper does positioning + circular
+   clip; inner img is oversized (150% so rotation doesn't expose gaps) and
+   tilted, with object-position framing the face. */
+.avatar-peek {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 7em;
+    height: 7em;
+    border-radius: 50%;
+    overflow: hidden;
+    transform: translate(55%, 55%);
+    transition: transform 400ms ease, width 400ms ease, height 400ms ease;
+    box-shadow: 0 0 30px rgba(0,0,0,0.4);
+    z-index: 10;
+}
+.avatar-peek img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150%;
+    height: 150%;
+    object-fit: cover;
+    object-position: 35% 65%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+@media (min-width: 1800px) {
+    .avatar-peek {
+        width: 14em;
+        height: 14em;
+        transform: translate(35%, 35%);
+    }
+    .avatar-peek:hover {
+        transform: translate(15%, 15%);
+    }
 }

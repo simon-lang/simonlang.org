@@ -16,20 +16,11 @@ window.addEventListener('load', (event) => {
 
     document.querySelectorAll('.read-more-items > li').forEach(el => {
         el.addEventListener('click', function (e) {
-            toggleReadMore(e.target)
-        })
-    })
-
-    document.querySelectorAll('.read-more').forEach(d => {
-        d.addEventListener('click', function (e) {
-            e.preventDefault()
-            toggleReadMore(e.target.parentElement)
-        })
-    })
-
-    document.querySelectorAll('.read-more-content').forEach(el => {
-        el.addEventListener('click', e => {
-            e.stopPropagation()
+            // Clicks inside the expanded content shouldn't toggle (and links there should work normally).
+            if (e.target.closest('.read-more-content')) return
+            // The .read-more anchor has href="#" — suppress navigation.
+            if (e.target.closest('.read-more')) e.preventDefault()
+            toggleReadMore(el)
         })
     })
 })
