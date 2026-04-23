@@ -8,7 +8,7 @@
 <!--<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">-->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
 <script src="src/router.js"></script>
 <script src="src/app.js"></script>
@@ -16,17 +16,17 @@
 <body class="loaded">
 <header class="header">
 <div class="simon">
-<img src="img/simon.png" alt="Simon Lang" class="simon__img">
+<img src="img/headshot.jpg" alt="Simon Lang" class="simon__img">
 <div>
 <h1 class="simon__name flat">Simon Lang</h1>
 <p class="simon__tagline flat">Pretty good programmer</p>
 </div>
 </div>
 <nav class="tabs">
-<a href="#/home" class="tabs__item tabs__item--selected">About me</a>
+<a href="#/home" class="tabs__item tabs__item--selected">About</a>
 <a href="#/employment" class="tabs__item">Employment</a>
 <a href="#/portfolio" class="tabs__item">Portfolio</a>
-<a href="#/skills" class="tabs__item show-desktop hidden">Skills</a>
+<a href="#/skills" class="tabs__item hidden">Skills</a>
 </nav>
 </header>
 <div class="view" id="view">
@@ -40,7 +40,7 @@
             </p>
             <p>I have developed applications across a range of industries including e-commerce, online gaming, education, health, scholarly publishing and patents.
                 More examples area available under&nbsp;<a class="nav" href="#/employment">employment</a>.</p>
-            <p>When not programming I'm most likely spending time with my twin&nbsp;<a href="#/about">daughters</a>.</p>
+            <p>When not programming I'm most likely spending time with my twin&nbsp;<a href="#/about">daughters</a>, reading or gardening.</p>
             <ul class="unstyled">
                 <li><a href="mailto:me@simonlang.org"><i class="fa fa-envelope"></i><span> me@simonlang.org</span></a>
                 </li>
@@ -57,7 +57,7 @@
             <p style="margin: 1em 0;"><small>Most of these positions have examples of work available in my&nbsp;<a
                         class="nav" href="#/portfolio">portfolio</a></small><br /></p>
             <ul class="spaced read-more-items">
-                <li><a class="read-more pull-right subtle" href="#">more info...</a>2022 - Present: iCare. Full Stack Engineer
+                <li><a class="read-more pull-right subtle" href="#">more info...</a><span class="meta-year">2022 - Present:</span> <span class="meta-company">iCare.</span> Full Stack Engineer
                     <small style="opacity: 0.7;"> (TypeScript, Kotlin, Ruby)</small>
                     <div class="hidden read-more-content">
                         <p>
@@ -73,7 +73,7 @@
                         <p>Projects use: TypeScript, React, Serverless, Kotlin, Spring, Ruby on Rails, AWS</p>
                     </div>
                 </li>
-                <li><a class="read-more pull-right subtle" href="#">more info...</a>2016 - 2022: Lens.org. Front End
+                <li><a class="read-more pull-right subtle" href="#">more info...</a><span class="meta-year">2016 - 2022:</span> <span class="meta-company">Lens.org.</span> Front End
                     Developer<small style="opacity: 0.7;"> (JavaScript)</small>
                     <div class="hidden read-more-content">
                         <p>Since 2016 I have helped the non-profit&nbsp;<a href="https://www.lens.org">Lens.org</a> with
@@ -86,7 +86,7 @@
                         <img lazy-src="https://about.lens.org/wp-content/uploads/2019/04/release.6.0.png" />
                     </div>
                 </li>
-                <li><a class="read-more pull-right subtle" href="#">more info...</a>2012 - 2016: Codeworx. Web
+                <li><a class="read-more pull-right subtle" href="#">more info...</a><span class="meta-year">2012 - 2016:</span> <span class="meta-company">Codeworx.</span> Web
                     Programmer<small style="opacity: 0.7;"> (Node JS, Coffeescript)</small>
                     <div class="hidden read-more-content">
                         <p>Starting in 2012, I worked full time for&nbsp;<a
@@ -99,7 +99,7 @@
                         <p>Project uses: Coffeescript, NodeJS, Socket IO, Browserify, Mocha, Jade</p>
                     </div>
                 </li>
-                <li><a class="read-more pull-right subtle" href="#">more info...</a>2012: Digicon. Web Programmer<small
+                <li><a class="read-more pull-right subtle" href="#">more info...</a><span class="meta-year">2012:</span> <span class="meta-company">Digicon.</span> Web Programmer<small
                         style="opacity: 0.7;"> (.NET, Javascript)</small>
                     <div class="hidden read-more-content">
                         <p>After returning from Scotland I immediately started working for a .NET Agency in Spring Hill
@@ -112,7 +112,7 @@
                             Framework.</p>
                     </div>
                 </li>
-                <li><a class="read-more pull-right subtle" href="#">more info...</a>2011: Open Platform. Front End
+                <li><a class="read-more pull-right subtle" href="#">more info...</a><span class="meta-year">2011:</span> <span class="meta-company">Open Platform.</span> Front End
                     Developer<small style="opacity: 0.7;"> (.NET, Javascript)</small>
                     <p class="hidden read-more-content">While living in Scotland, I briefly worked for the Edinburgh
                         .NET software
@@ -124,13 +124,13 @@
                         creating the
                         front-end of their new website, using jQuery and CSS3.</p>
                 </li>
-                <li><a class="read-more pull-right subtle" href="#">more info...</a>2010 - 2011: Self Employed. Web
+                <li><a class="read-more pull-right subtle" href="#">more info...</a><span class="meta-year">2010 - 2011:</span> <span class="meta-company">Self Employed.</span> Web
                     Programmer<small style="opacity: 0.7;"> (PHP, MySQL, Javascript)</small>
                     <p class="hidden read-more-content">One year working primarily through oDesk. Mostly 2-3 major
                         projects and
                         about 8-10 smaller, shorter ones. Almost all web applications.</p>
                 </li>
-                <li><a class="read-more pull-right subtle" href="#">more info...</a>2006 - 2010: Kintek.com.au.
+                <li><a class="read-more pull-right subtle" href="#">more info...</a><span class="meta-year">2006 - 2010:</span> <span class="meta-company">Kintek.com.au.</span>
                     Production
                     Manager<small style="opacity: 0.7;"> (PHP, MySQL, Javascript)</small>
                     <p class="hidden read-more-content">When I joined Kintek there were only two other staff members.
@@ -143,8 +143,8 @@
                         Development,
                         and the web as a platform.</p>
                 </li>
-                <li><a class="read-more pull-right subtle" href="#">more info...</a>2008 - 2009: University of
-                    Queensland.
+                <li><a class="read-more pull-right subtle" href="#">more info...</a><span class="meta-year">2008 - 2009:</span> <span class="meta-company">University of
+                    Queensland.</span>
                     Tutor<small style="opacity: 0.7;"> (Web Information Systems)</small>
                     <p class="hidden read-more-content">At University I worked as a tutor for a third year Web
                         Information Systems
@@ -156,7 +156,7 @@
                         unlike a lot of
                         the other subjects I took.</p>
                 </li>
-                <li><a class="read-more pull-right subtle" href="#">more info...</a>2001 - 2005: Daily Mercury. IT
+                <li><a class="read-more pull-right subtle" href="#">more info...</a><span class="meta-year">2001 - 2005:</span> <span class="meta-company">Daily Mercury.</span> IT
                     Support<p class="hidden read-more-content">During high school and university holidays I worked as a
                         trainee to the
                         systems administrator of a local newspaper of about 100 staff. I really enjoyed this job. My
@@ -266,7 +266,7 @@
             <p style="margin: 1em 0;"><small>More information on the employers mentioned available under&nbsp;<a
                         class="nav" href="#/employment">employment</a></small><br /></p>
             <ul class="spaced read-more-items">
-                <li>Lens.org - Patent and Scholarly Search<a class="read-more pull-right subtle" href="">more
+                <li><span class="meta-project">Lens.org</span> - Patent and Scholarly Search<a class="read-more pull-right subtle" href="">more
                         info...</a>
                     <div class="hidden read-more-content">
                         <p>Since 2016 I have helped the non-profit Lens.org with their mission to map the world's
@@ -276,7 +276,7 @@
                                 lazy-src="http://i.imgur.com/SiN31CB.png" /></div>
                     </div>
                 </li>
-                <li>Mars Rover Image Viewer<a class="read-more pull-right subtle" href="">more info...</a>
+                <li><span class="meta-project">Mars Rover Image Viewer</span><a class="read-more pull-right subtle" href="">more info...</a>
                     <div class="hidden read-more-content">
                         <p>A toy project that started as a coding interview test but which captured my imagination, and
                             I spent the better part of a weekend working on. It uses open source NASA APIs to fetch Mars
@@ -288,7 +288,7 @@
                                 href="http://simon-lang.github.io/mars-rover-image-viewer">Check it out, here</a></div>
                     </div>
                 </li>
-                <li>Merge Gaming - Fantasy Sports<a class="read-more pull-right subtle" href="">more info...</a>
+                <li><span class="meta-project">Merge Gaming</span> - Fantasy Sports<a class="read-more pull-right subtle" href="">more info...</a>
                     <div class="hidden read-more-content">
                         <p>During 2014 - 2016 at Codeworx, we built a Daily Fantasy Sports site for MLB, NFL, NHL and
                             NBA.</p>
@@ -297,7 +297,7 @@
                         <div class="center"><img lazy-src="http://i.imgur.com/jBIhOic.png" /></div>
                     </div>
                 </li>
-                <li>Merge Gaming - Web Poker Client<a class="read-more pull-right subtle" href="">more info...</a>
+                <li><span class="meta-project">Merge Gaming</span> - Web Poker Client<a class="read-more pull-right subtle" href="">more info...</a>
                     <div class="hidden read-more-content">
                         <p>During 2012 - 2014 I worked full time for Codeworx, producing a mobile web client for their
                             poker network.</p>
@@ -307,7 +307,7 @@
                                 lazy-src="img/webclient3.png" alt="" /></div>
                     </div>
                 </li>
-                <li>Code Audit<a class="read-more pull-right subtle" href="">more info...</a>
+                <li><span class="meta-project">Code Audit</span><a class="read-more pull-right subtle" href="">more info...</a>
                     <div class="hidden read-more-content">
                         <p>In 2014 I consulted for a Brisbane business who producied web applications. I reviewed one of
                             their apps and codebase and produced a 10 page report covering the following aspects of
@@ -335,7 +335,7 @@
                         </ul>
                     </div>
                 </li>
-                <li>Drawing Tool Prototype<a class="read-more pull-right subtle" href="">more info...</a>
+                <li><span class="meta-project">Drawing Tool Prototype</span><a class="read-more pull-right subtle" href="">more info...</a>
                     <div class="hidden read-more-content">
                         <p>In 2014 I assisted a Queensland business to produce a prototype for a unique web-based
                             drafting type tool. The prototype was used in several early demos then turned over to full
@@ -347,7 +347,7 @@
                         <div class="center"><img lazy-src="img/drawing-tool.png" /></div>
                     </div>
                 </li>
-                <li>Hipcharts<a class="read-more pull-right subtle" href="">more info...</a>
+                <li><span class="meta-project">Hipcharts</span><a class="read-more pull-right subtle" href="">more info...</a>
                     <div class="hidden read-more-content">
                         <p>Weekend projects for experimenting with new technology. Designed by a mate of mine,<a
                                 href="https://github.com/jsncbt">Jason Corbett</a></p>
@@ -355,14 +355,14 @@
                         <div class="center"><img lazy-src="img/hipcharts1.png" alt="" /></div>
                     </div>
                 </li>
-                <li>CIO Agency<a class="read-more pull-right subtle" href="">more info...</a>
+                <li><span class="meta-project">CIO Agency</span><a class="read-more pull-right subtle" href="">more info...</a>
                     <div class="hidden read-more-content">
                         <p>A small functional prototype</p>
                         <p>Project uses: Coffeescript, NodeJS, Browserify. Trello for project management.</p><img
                             lazy-src="img/cio.png" alt="" />
                     </div>
                 </li>
-                <li>Spanish Conjugation Quiz<a class="read-more pull-right subtle" href="">more info...</a>
+                <li><span class="meta-project">Spanish Conjugation Quiz</span><a class="read-more pull-right subtle" href="">more info...</a>
                     <div class="hidden read-more-content">
                         <p>A quiz game I made to help me practice conjugating verbs in Spanish</p>
                         <p>Runs both as interactive command line app or web interface</p>
@@ -370,7 +370,7 @@
                             lazy-src="https://github.com/simon-lang/spanish-conjugation-quiz/raw/master/anim.gif" />
                     </div>
                 </li>
-                <li>Open Platform Website<a class="read-more pull-right subtle" href="">more info...</a>
+                <li><span class="meta-project">Open Platform Website</span><a class="read-more pull-right subtle" href="">more info...</a>
                     <div class="hidden read-more-content">
                         <p>For a few months while living in Edinburgh I worked for a .NET agency (see Employment for
                             more details). One of the projects I worked on during that time was a redevelopment of their
@@ -378,7 +378,7 @@
                                 alt="" /></a>
                     </div>
                 </li>
-                <li>Winning Games: Wickets, Nations &amp; States Card Games<a class="read-more pull-right subtle"
+                <li><span class="meta-project">Winning Games:</span> Wickets, Nations &amp; States Card Games<a class="read-more pull-right subtle"
                         href="">more info...</a>
                     <div class="hidden read-more-content">In 2011 I assisted a small Australian business called Winning
                         Games to make their card games into web-based apps. They include multiplayer, mini games,
@@ -390,7 +390,7 @@
                             href="http://www.leadnations.com/">http://www.leadnations.com/</a><br /><a
                             href="http://www.playstates.com/">http://www.playstates.com/</a><br /></div>
                 </li>
-                <li>CabakMon Digital Signage<a class="read-more pull-right subtle" href="">more info...</a>
+                <li><span class="meta-project">CabakMon Digital Signage</span><a class="read-more pull-right subtle" href="">more info...</a>
                     <div class="hidden read-more-content">This was a pretty interesting project that involved
                         interfacing with a few different systems. The result was a slideshow that appeared on an array
                         of large-screen televisions in a local shopping center. On the slides were real-time weather
@@ -400,19 +400,19 @@
                                 lazy-src="img/cabak-3.jpg" /><img lazy-src="img/cabak-4.jpg" /></div>Technologies used:
                         PHP, Zend_RSS, GD2, SQL Server, IIS.</div>
                 </li>
-                <li>Vesox.com Domain Generator<a class="read-more pull-right subtle" href="">more info...</a>
+                <li><span class="meta-project">Vesox.com Domain Generator</span><a class="read-more pull-right subtle" href="">more info...</a>
                     <div class="hidden read-more-content">A very small tool for a client I started with recently -
                         generates "random" domains for prospective hosting customers, and checks their
                         availability.<br /><br />Technologies used: PHP, Symfony, MySQL</div>
                 </li>
-                <li>Work Experience Directory<a class="read-more pull-right subtle" href="">more info...</a>
+                <li><span class="meta-project">Work Experience Directory</span><a class="read-more pull-right subtle" href="">more info...</a>
                     <div class="hidden read-more-content">One of the first projects I took on as a freelancer, involved
                         creating a simple job-search type website, but targeted specifically at Australian high school
                         students looking for work experience placements.<div style="text-align: center; padding: 20px;">
                             <img lazy-src="img/wed.jpg" /></div>
                     </div>
                 </li>
-                <li>STK Newsletter Template<a class="read-more pull-right subtle" href="">more info...</a>
+                <li><span class="meta-project">STK Newsletter Template</span><a class="read-more pull-right subtle" href="">more info...</a>
                     <div class="hidden read-more-content">A very simple newsletter template. Sliced from PSD to HTML+CSS
                         <div style="text-align: center; padding: 20px;"><img lazy-src="img/stk.jpg" /></div>
                     </div>

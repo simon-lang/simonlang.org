@@ -6,12 +6,14 @@
 
 html {
   background: #182948;
+  background: linear-gradient(135deg, #182948 0%, #1d314f 50%, #153045 100%);
+  background-attachment: fixed;
+  min-height: 100vh;
 }
 
 body {
   font-size: 20px;
-  /* font-family: "Source Sans Pro"; */
-  font-family: "Inter", sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   color: #DADADA;
   line-height: 1.5;
 }
@@ -66,6 +68,7 @@ ul {
 
 .header {
   background-color: #09496C;
+  background: linear-gradient(200deg, #0b5278 0%, #09496C 45%, #073a56 100%);
   box-shadow: 0 10px 20px rgba(0,0,0,0.1);
   overflow: hidden;
 }
@@ -90,7 +93,12 @@ ul {
 
 .simon__img {
   width: 3.75em;
-  margin-right: 0.625rem;
+  height: 3.75em;
+  object-fit: cover;
+  object-position: center 30%;
+  transform: scale(1.25);
+  border-radius: 50%;
+  margin-right: 1rem;
 }
 
 .simon__tagline {
@@ -109,7 +117,7 @@ ul {
   color: #fff;
   text-decoration: none;
   outline: 0;
-  font-size: 1.1em;
+  font-size: 0.9em;
   opacity: 0.8;
   padding: 1.25em;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
@@ -228,14 +236,14 @@ ul {
     top: 0;
     left: 0;
     height: 100vh;
-    width: 400px;
+    width: 340px;
     padding-top: 0;
   }
 
   .view {
     flex: 1;
     padding: 2.5em;
-    margin-left: calc(400px);
+    margin-left: calc(340px);
   }
 
   .tabs {
@@ -247,7 +255,7 @@ ul {
     text-align: left;
     display: block;
     width: 100%;
-    padding: 0.25em;
+    padding: 0.5em;
     font-size: 1.5em;
   }
 
@@ -332,6 +340,18 @@ a {
 }
 .subtle {
     opacity: 0.8;
+}
+.meta-year {
+    color: #7ea6c4;
+    font-variant-numeric: tabular-nums;
+}
+.meta-company {
+    color: #fff;
+    font-weight: 500;
+}
+.meta-project {
+    color: #fff;
+    font-weight: 500;
 }
 .read-more-content {
     padding: 1em;
