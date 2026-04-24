@@ -384,11 +384,6 @@ a:hover {
     border-radius: 4px;
     margin: 0;
 }
-h1 .fa {
-    float: right;
-    opacity: 0.5;
-    color: #faab3f;
-}
 /* hacks */
 ul.unstyled {
     margin-left: 0;
@@ -399,6 +394,13 @@ ul.unstyled>li {
 }
 ul.unstyled>li>a>span {
     margin-left: 0.5em;
+}
+.icon {
+    display: inline-block;
+    width: 1.1em;
+    height: 1.1em;
+    vertical-align: -0.2em;
+    fill: currentColor;
 }
 ul.unstyled > li > a {
     text-decoration: none;
