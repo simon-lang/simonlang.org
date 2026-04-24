@@ -26,8 +26,9 @@ function router() {
         active.classList.add('section-enter')
         // const c = new route.controller
         // document.title = c.title || 'scratch'
+        const navUrl = url === '/' ? '/home' : url
         document.querySelectorAll('nav a').forEach(el => {
-            const active = el.getAttribute('href') === `#${url}`
+            const active = el.getAttribute('href') === `#${navUrl}`
             el.classList.toggle('tabs__item--selected', active)
         })
     }

@@ -263,7 +263,7 @@ ul {
 
   .view {
     flex: 1;
-    padding: 2.5em;
+    padding: 1.5em 2.5em 2.5em;
     margin-left: calc(380px);
   }
 
