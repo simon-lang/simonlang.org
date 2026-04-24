@@ -16,8 +16,14 @@ function router() {
     if (el && route && route.controller) {
         // el.innerHTML = template(route.templateId, new route.controller())
         // temporary solution instead of real templating
-        el.querySelectorAll('section').forEach(view => view.classList.add('hidden'))
-        el.querySelector('#' + route.templateId).classList.remove('hidden')
+        el.querySelectorAll('section').forEach(view => {
+            view.classList.add('hidden')
+            view.classList.remove('section-enter')
+        })
+        const active = el.querySelector('#' + route.templateId)
+        active.classList.remove('hidden')
+        void active.offsetWidth
+        active.classList.add('section-enter')
         // const c = new route.controller
         // document.title = c.title || 'scratch'
         document.querySelectorAll('nav a').forEach(el => {
