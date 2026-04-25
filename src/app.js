@@ -1,11 +1,19 @@
 window.addEventListener('load', (event) => {
 
-    const toggleReadMore = (container) => {
+    const collapseItem = (container) => {
         const el = container.querySelector('.read-more-content')
-        el.classList.toggle('hidden')
-        const hidden = el.classList.contains('hidden')
+        if (!el || el.classList.contains('hidden')) return
+        el.classList.add('hidden')
         const link = container.querySelector('.read-more')
-        link.innerText = hidden ? 'more info...' : 'collapse...'
+        if (link) link.innerText = 'more info...'
+    }
+
+    const expandItem = (container) => {
+        const el = container.querySelector('.read-more-content')
+        if (!el) return
+        el.classList.remove('hidden')
+        const link = container.querySelector('.read-more')
+        if (link) link.innerText = 'collapse...'
         el.querySelectorAll('img').forEach(img => {
             const src = img.getAttribute('lazy-src')
             if (src && !img.getAttribute('src')) {
@@ -16,6 +24,15 @@ window.addEventListener('load', (event) => {
                 img.setAttribute('src', src)
             }
         })
+    }
+
+    const toggleReadMore = (container) => {
+        const isOpen = !container.querySelector('.read-more-content')?.classList.contains('hidden')
+        // Collapse all siblings in the same group
+        const group = container.closest('.read-more-items')
+        if (group) group.querySelectorAll(':scope > *').forEach(sib => collapseItem(sib))
+        // If it was closed, open it
+        if (!isOpen) expandItem(container)
     }
 
     // Skills cloud temporarily disabled
@@ -37,7 +54,7 @@ window.addEventListener('load', (event) => {
     //     })
     // }
 
-document.querySelectorAll('.read-more-items > li').forEach(el => {
+document.querySelectorAll('.read-more-items > *').forEach(el => {
         el.addEventListener('click', function (e) {
             // Clicks inside the expanded content shouldn't toggle (and links there should work normally).
             if (e.target.closest('.read-more-content')) return

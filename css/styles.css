@@ -451,7 +451,7 @@ section {
     }
 }
 
-/* Amber bullet dots on the read-more list */
+/* Amber bullet dots on the read-more list (portfolio) */
 .read-more-items {
     color: #d1d8e2;
     list-style: none;
@@ -462,7 +462,7 @@ section {
     padding-left: 1.4em;
 }
 .read-more-items > li::before {
-    content: "•";
+    content: "\2022";
     position: absolute;
     left: 0.45em;
     top: 0.5em;
@@ -470,6 +470,58 @@ section {
     opacity: 0.95;
     font-size: 1.1em;
     line-height: 1;
+}
+
+/* ── Employment timeline ── */
+.timeline {
+    position: relative;
+    padding-left: 1.6em;
+    margin-left: 0.4em;
+}
+/* Vertical line */
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: rgba(250, 171, 63, 0.3);
+}
+/* Each entry */
+.timeline__entry {
+    position: relative;
+    cursor: pointer;
+    padding: 0.4em 0.4em 0.4em 0;
+    min-height: max(3.5rem, calc(var(--years) * 1.5rem));
+}
+.timeline__entry:hover {
+    background: rgba(255, 255, 255, 0.045);
+}
+/* Dot node on the line */
+.timeline__entry::before {
+    content: "";
+    position: absolute;
+    left: calc(-1.6em - 4px);
+    top: 0.75em;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #faab3f;
+    box-shadow: 0 0 6px rgba(250, 171, 63, 0.5);
+}
+/* Hide "more info..." link in timeline */
+.timeline__entry > .read-more {
+    display: none;
+}
+/* Year label */
+.timeline__year {
+    display: block;
+    color: #faab3f;
+    font-size: 0.8em;
+    font-variant-numeric: tabular-nums;
+    font-weight: 500;
+    margin-bottom: 0.1em;
 }
 
 /* Tighter "more info..." link */
@@ -483,7 +535,8 @@ section {
 .pull-right {
     float: right;
 }
-.read-more-items > li:hover .read-more {
+.read-more-items > li:hover .read-more,
+.timeline__entry:hover .read-more {
     opacity: 1;
     color: #ffc673;
 }
